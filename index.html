@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AceFireWolf's Art Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #121212;
+      color: #f0f0f0;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 2em;
+      background-color: #1f1f1f;
+      box-shadow: 0 0 15px #0ff;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.5em;
+      color: #00ffff;
+      text-shadow: 0 0 10px #00ffff;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1em;
+      padding: 2em;
+    }
+
+    .artwork {
+      width: 280px;
+      background-color: #1e1e1e;
+      border: 1px solid #333;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #0ff;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      opacity: 0;
+    }
+
+    .artwork img {
+      width: 100%;
+      display: block;
+    }
+
+    .artwork:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #00ffff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1em;
+      background-color: #1f1f1f;
+      font-size: 0.9em;
+    }
+
+    a {
+      color: #00ffff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AceFireWolf's Pixel Art Portfolio</h1>
+    <p><a href="https://www.pixilart.com/acefirewolf/photos" target="_blank">View Full Gallery on Pixilart</a></p>
+  </header>
+
+  <div class="gallery">
+    <!-- Example images manually copied from Pixilart gallery -->
+    <div class="artwork"><img src="https://art.pixilart.com/thumb/0d5282fdc6970f7.png" alt="Art 1"></div>
+    <div class="artwork"><img src="https://art.pixilart.com/thumb/5e7316db74a68cd.png" alt="Art 2"></div>
+    <div class="artwork"><img src="https://art.pixilart.com/thumb/e44eb9fc23e760d.png" alt="Art 3"></div>
+    <div class="artwork"><img src="https://art.pixilart.com/thumb/59dc2285cf73918.png" alt="Art 4"></div>
+    <div class="artwork"><img src="https://art.pixilart.com/thumb/b97b12126b79a1c.png" alt="Art 5"></div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 AceFireWolf. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Fade in gallery items one by one
+    const artworks = document.querySelectorAll('.artwork');
+    let delay = 0;
+
+    artworks.forEach((art, i) => {
+      setTimeout(() => {
+        art.style.opacity = 1;
+      }, delay);
+      delay += 200;
+    });
+  </script>
+</body>
+</html>
